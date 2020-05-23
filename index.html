@@ -354,17 +354,19 @@
                   <div class="orders-body">
                       <div class="orders-list">
                           <div class="order-card">
+                            <a href="#" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content">
                             <div class="barras">
                               <div class="barra">
                                  <div class="barra-nivel" data-nivel="80%"></div>
                               </div>
-                              </div>
+                              </div></a>
                                 <img src="res/images/icons/User Profile.png" width="60px" class="float-left" style="margin-left: 10px;">
                                 <div class="customer-details">
                                     <b>Abbessh Chatterjee</b><br>
                                     ID123456789<br><br>
                                     <input type="checkbox"><span class="ver-hr"></span><i class="fa fa-star"></i><span class="ver-hr"></span><i class="fa fa-times"></i>
                                 </div>
+                             
                           </div>
                           <div class="order-card">
                             <div class="barras">
@@ -620,6 +622,7 @@
             <div id="support" class="main-div d-none"></div>
         </div>
     </div>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
    
@@ -936,8 +939,6 @@ function step(n) {
         $('.order-details').show();
     });
   </script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!--===============================================================================================-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
@@ -962,7 +963,10 @@ function step(n) {
 
 $('.fa-star').click(function(){
   $(this).toggleClass('fa-active');
-})
+});
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
 </script>
 </body>
 </html>

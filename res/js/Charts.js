@@ -33,19 +33,23 @@ var ctxL = document.getElementById("lineChart").getContext('2d');var ctxL = docu
         var gradientFill = ctxL.createLinearGradient(0, 0, 0, 290);
         gradientFill.addColorStop(0, "rgba(230, 130, 13, 1)");
           gradientFill.addColorStop(1, "rgba(230, 130, 13, 0.1)");
+        
+          var gradientFill1 = ctxL.createLinearGradient(0, 0, 0, 290);
+        gradientFill1.addColorStop(0, "rgb(25, 24, 116)");
+          gradientFill1.addColorStop(1, "rgba(245, 245, 245, 0.1)");
 
           var myChart = new Chart(ctxL, {
             type: 'bar',
             data: {
               labels: ["M", "T", "W", "T", "F", "S", "S"],
               datasets: [{
-                label: 'apples',
+                label: 'Sales',
                 data: [12, 19, 3, 17, 28, 24, 7],
-                backgroundColor: "rgba(153,255,51,1)"
+                backgroundColor: gradientFill
               }, {
-                label: 'oranges',
+                label: 'Revenue',
                 data: [30, 29, 5, 5, 20, 3, 10],
-                backgroundColor: "rgba(255,153,0,1)"
+                backgroundColor: gradientFill1
               }]
             }
           });
