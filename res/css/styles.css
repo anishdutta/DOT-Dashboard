@@ -16,8 +16,10 @@ body{
 }
 .side-bar{ 
     border-radius: 20px 0 0 20px;
-    background-color: rgb(239,130,13);
-}
+    background: #f12711;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
 .sidebar-expanded {
     width: 230px;
 }
@@ -501,7 +503,6 @@ progress {
     margin-left: 80px;
 }
 .order-card{
-    padding: 10px;
     background-color: white;
     margin-bottom: 15px;
     margin-right: 15px;
@@ -521,10 +522,11 @@ progress {
     padding-top: 10px;
     width: 350px;
     display: inline-block;
+    margin-left: 20px;
 }
 .orders-detail{
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 45px;
     margin-top: 30px;
     background-color: white;
     width: 100vh;
@@ -964,136 +966,29 @@ table{
     background: red; /* Green */
 }
 .demo-wrapper {
-	width: 300px;
-	margin: 0px auto 0;
 }
-.html5-progress-bar {
-	padding: 5px 5px;
-	border-radius: 3px;
-  background-color: #fff;
+.barra {
+  height:10px; 
+  background:#CCC; 
   margin-bottom: 10px;
 }
-.html5-progress-bar progress {
-	background-color: #f3f3f3;
-	border: 0;
-	width: 80%;
-	height: 15px;
-	border-radius: 9px;
-}
-.html5-progress-bar progress::-webkit-progress-bar {
-	background-color: #f3f3f3;
-	border-radius: 9px;
-}
-.html5-progress-bar progress::-webkit-progress-value {
-	background: #cdeb8e;
-	background: -moz-linear-gradient(top,  #cdeb8e 0%, #357e47 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#287454));
-	background: -webkit-linear-gradient(top,  #cdeb8e 0%,#2b6350 100%);
-	background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
-	border-radius: 9px;
-}
-.html5-progress-bar progress::-moz-progress-bar {
-	background: #cdeb8e;
-	background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
-	background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%);
-	background: linear-gradient(to bottom,  #cdeb8e 0%,#a5c956 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
-	border-radius: 9px;
-}
-.html5-progress-bar .progress-value {
-	padding: 0px 5px;
-	line-height: 20px;
-	margin-left: 5px;
-	font-size: .8em;
-	color: #555;
-	height: 18px;
-	float: right;
-}
-.container .progress {
-  margin: 0 auto;
-  width: 400px;
-}
+.barra-nivel {
+  height:10px; 
+  background: #fc4a1a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-.progress {
-  padding: 4px;
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  width:1px;
+  -webkit-transition: width 1s ease;
+  -moz-transition: width 1s ease;
+  transition: width 1s ease;
 }
-
-.progress-bar {
-  height: 16px;
-  border-radius: 4px;
-	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
-  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
-  -webkit-transition: 0.4s linear;
-  -moz-transition: 0.4s linear;
-  -o-transition: 0.4s linear;
-  transition: 0.4s linear;
-  -webkit-transition-property: width, background-color;
-  -moz-transition-property: width, background-color;
-  -o-transition-property: width, background-color;
-  transition-property: width, background-color;
-  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+.valor-nivel {
+  font-family:"Montserrat"; 
 }
-
-/*
- * Note: using adjacent or general sibling selectors combined with
- *       pseudo classes doesn't work in Safari 5.0 and Chrome 12.
- *       See this article for more info and a potential fix:
- *       https://css-tricks.com/webkit-sibling-bug/
- */
-
-#five:checked ~ .progress > .progress-bar {
-  width: 5%;
-  background-color: #f63a0f;
+.fa-star{
+  color: goldenrod;
 }
-
-#twentyfive:checked ~ .progress > .progress-bar {
-  width: 25%;
-  background-color: #f27011;
-}
-
-#fifty:checked ~ .progress > .progress-bar {
-  width: 50%;
-  background-color: #f2b01e;
-}
-
-#seventyfive:checked ~ .progress > .progress-bar {
-  width: 75%;
-  background-color: #f2d31b;
-}
-
-#onehundred:checked ~ .progress > .progress-bar {
-  width: 100%;
-  background-color: #86e01e;
-}
-
-.radio {
-  display: none;
-}
-
-.label {
-  display: inline-block;
-  margin: 0 5px 20px;
-  padding: 3px 8px;
-  color: #aaa;
-  text-shadow: 0 1px black;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.radio:checked + .label {
-  color: white;
-  background: rgba(0, 0, 0, 0.25);
+.fa-times{
+  color: rgb(230, 8, 8);
 }
