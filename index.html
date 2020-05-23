@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!--===============================================================================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
 <style>
     
 </style>
@@ -118,18 +120,18 @@
             <div id="dash-board" class="main-div">
                 <h1 class="dash mt-4 "><span style="font-weight: 700;">Dashboard</span> Overview</h1>
                 <div class="main-head"  style="background-image: url('res/images/shop.jpg') ">
-                    <div class="dash-card">
-                        <h2>Orders Placed</h2>
-                            523
-                    </div>
-                    <div class="dash-card">
-                        <h2>Orders Placed</h2>
-                            523
-                    </div>
-                    <div class="dash-card">
-                        <h2>Orders Placed</h2>
-                            523
-                    </div>
+                  <div class="dash-card" data-aos="fade-right">
+                    <h2>Orders Placed</h2>
+                        523
+                </div>
+                <div class="dash-card" data-aos="zoom-in">
+                    <h2>Orders Placed</h2>
+                        523
+                </div>
+                <div class="dash-card" data-aos="fade-left">
+                    <h2>Orders Placed</h2>
+                        523
+                </div>
                 </div>
                 <div class="d-flex align-items-center">
                     <div class="tabs dash-container">
@@ -208,7 +210,7 @@
                                 </div>
                             </div> -->
                             <div class="deliveries">
-                            <div class="container del-cont ">
+                            <div class=" del-cont ">
                                 <div class="content">
                                     <div class="del-top">
                                     </div>
@@ -225,7 +227,7 @@
                                     </div>
                                 </div>
                               </div>
-                            <div class="container del-cont">
+                            <div class=" del-cont">
                                 <div class="content">
                                     <div class="del-top">
                                     </div>
@@ -242,7 +244,7 @@
                                     </div>
                                 </div>
                               </div>
-                            <div class="container del-cont">
+                            <div class=" del-cont">
                                 <div class="content">
                                     <div class="del-top">
                                     </div>
@@ -259,7 +261,7 @@
                                     </div>
                                 </div>
                               </div>
-                            <div class="container del-cont">
+                            <div class=" del-cont">
                                 <div class="content">
                                     <div class="del-top">
                                     </div>
@@ -276,7 +278,7 @@
                                     </div>
                                 </div>
                               </div>
-                            <div class="container del-cont">
+                            <div class=" del-cont">
                                 <div class="content">
                                     <div class="del-top">
                                     </div>
@@ -293,6 +295,54 @@
                                     </div>
                                 </div>
                               </div>
+                            <div class=" del-cont">
+                                <div class="content">
+                                    <div class="del-add">
+                                    </div>
+                                     <i class="fas fa-user-plus"></i>
+                                     <div class="del-name">
+                                      <button type="button" class="btn btn-primary btn-del" data-toggle="modal" data-target="#exampleModal">
+                                        Add Delivery Person
+                                      </button>
+                                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLabel">Add delivery person's details</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                              <h3>Name</h3>
+                                              <input class="form-control" placeholder="Enter Name">
+                                              <h3>Phone number</h3><input class="form-control" placeholder="+91 5555555555">
+                                              <h3>WhatsApp number</h3><input class="form-control" placeholder="+91 5555555555">
+
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                              <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                     
+                                    <div class="del-name">
+                                    </div>
+                                   
+                                </div>
+                              </div>
+                              
+                            <!-- <div class=" del-cont">
+                                <div class="content">
+                                  <div class="round-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                  </div>
+                                  
+                                </div>
+                              </div> -->
                             
                             
                             </div>
@@ -304,6 +354,12 @@
                   <div class="orders-body">
                       <div class="orders-list">
                           <div class="order-card">
+                            <div class="demo-wrapper html5-progress-bar">
+                              <div class="progress-bar-wrapper">
+                                <progress id="progressbar" value="20" max="100"></progress>
+                                <span class="progress-value"></span>
+                              </div>
+                            </div>
                                 <img src="res/images/icons/User Profile.png" width="60px" class="float-left">
                                 <div class="customer-details">
                                     <b>Abbessh Chatterjee</b><br>
@@ -312,6 +368,26 @@
                                 </div>
                           </div>
                           <div class="order-card">
+                            <div class="demo-wrapper html5-progress-bar">
+                              <div class="progress-bar-wrapper">
+                                <progress id="progressbar" value="100" max="100"></progress>
+                                <span class="progress-value"></span>
+                              </div>
+                            </div>
+                                <img src="res/images/icons/User Profile.png" width="60px" class="float-left">
+                                <div class="customer-details">
+                                    <b>Abih Chatterjee</b><br>
+                                    ID123456789<br><br>
+                                    <input type="checkbox"><span class="ver-hr"></span><i class="fa fa-star"></i><span class="ver-hr"></span><i class="fa fa-times"></i>
+                                </div>
+                          </div>
+                          <div class="order-card">
+                            <div class="demo-wrapper html5-progress-bar">
+                              <div class="progress-bar-wrapper">
+                                <progress id="progressbar" value="50" max="100"></progress>
+                                <span class="progress-value"></span>
+                              </div>
+                            </div>
                                 <img src="res/images/icons/User Profile.png" width="60px" class="float-left">
                                 <div class="customer-details">
                                     <b>Abbessh Chatterjee</b><br>
@@ -320,6 +396,12 @@
                                 </div>
                           </div>
                           <div class="order-card">
+                            <div class="demo-wrapper html5-progress-bar">
+                              <div class="progress-bar-wrapper">
+                                <progress id="progressbar" value="50" max="100"></progress>
+                                <span class="progress-value"></span>
+                              </div>
+                            </div>
                                 <img src="res/images/icons/User Profile.png" width="60px" class="float-left">
                                 <div class="customer-details">
                                     <b>Abbessh Chatterjee</b><br>
@@ -328,6 +410,12 @@
                                 </div>
                           </div>
                           <div class="order-card">
+                            <div class="demo-wrapper html5-progress-bar">
+                              <div class="progress-bar-wrapper">
+                                <progress id="progressbar" value="50" max="100"></progress>
+                                <span class="progress-value"></span>
+                              </div>
+                            </div>
                                 <img src="res/images/icons/User Profile.png" width="60px" class="float-left">
                                 <div class="customer-details">
                                     <b>Abbessh Chatterjee</b><br>
@@ -336,6 +424,12 @@
                                 </div>
                           </div>
                           <div class="order-card">
+                            <div class="demo-wrapper html5-progress-bar">
+                              <div class="progress-bar-wrapper">
+                                <progress id="progressbar" value="50" max="100"></progress>
+                                <span class="progress-value"></span>
+                              </div>
+                            </div>
                                 <img src="res/images/icons/User Profile.png" width="60px" class="float-left">
                                 <div class="customer-details">
                                     <b>Abbessh Chatterjee</b><br>
@@ -344,6 +438,12 @@
                                 </div>
                           </div>
                           <div class="order-card">
+                            <div class="demo-wrapper html5-progress-bar">
+                              <div class="progress-bar-wrapper">
+                                <progress id="progressbar" value="50" max="100"></progress>
+                                <span class="progress-value"></span>
+                              </div>
+                            </div>
                                 <img src="res/images/icons/User Profile.png" width="60px" class="float-left">
                                 <div class="customer-details">
                                     <b>Abbessh Chatterjee</b><br>
@@ -351,14 +451,7 @@
                                     <input type="checkbox"><span class="ver-hr"></span><i class="fa fa-star"></i><span class="ver-hr"></span><i class="fa fa-times"></i>
                                 </div>
                           </div>
-                          <div class="order-card">
-                                <img src="res/images/icons/User Profile.png" width="60px" class="float-left">
-                                <div class="customer-details">
-                                    <b>Abbessh Chatterjee</b><br>
-                                    ID123456789<br><br>
-                                    <input type="checkbox"><span class="ver-hr"></span><i class="fa fa-star"></i><span class="ver-hr"></span><i class="fa fa-times"></i>
-                                </div>
-                          </div>
+                         
                       </div>
                       <div class="orders-detail">
                           
@@ -518,6 +611,44 @@
             <div id="support" class="main-div d-none"></div>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+     
+
+
+     
+			var progressbar = $('#progressbar'),
+				max = progressbar.attr('max'),
+				time = (1000/max)*5,
+		        value = progressbar.val();
+
+		   
+        
+        if (value == 25 ){
+              $('.progress-value').html('Placed');
+
+            }
+            else if (value == 50){
+              $('.progress-value').html('Dispatched');
+
+            }
+            else if (value == 100){
+              $('.progress-value').html('Delivered');
+
+            }
+		        
+
+	
+
+      $('.order-card').click(function(){
+        $('.orders-details').attr('data-aos', 'fade-up');
+      })
+      AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+      })
+      
+    </script>
   <script>
   $(document).ready(function() {
   $("input[name='shipment']").change(function(e) {
@@ -819,6 +950,9 @@ function step(n) {
         $('.order-details').show();
     });
   </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!--===============================================================================================-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
 <!--===============================================================================================-->
