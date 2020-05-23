@@ -453,7 +453,7 @@
                                 <img src="res/images/icons/User Profile.png" width="60px" class="float-left" style="margin-left: 10px;">
                                 <div class="customer-details">
                                     <b>Abbessh Chatterjee</b><br>
-                                    ID123456789<br><br>
+                                    ID123456789<br>
                                     <input type="checkbox"><span class="ver-hr"></span><i class="fa fa-star"></i><span class="ver-hr"></span><i class="fa fa-times"></i>
                                 </div>
                           </div>
@@ -959,6 +959,10 @@ function step(n) {
         width: valorLargura
     });
 });
+
+$('.fa-star').click(function(){
+  $(this).toggleClass('fa-active');
+})
 </script>
 </body>
 </html>
